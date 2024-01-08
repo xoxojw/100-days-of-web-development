@@ -2,6 +2,10 @@ body {
   margin: 50px;
 }
 
+h1 {
+  color: rgb(170, 96, 83);
+}
+
 img {
   width: 150px;
   height: 150px;
