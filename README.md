@@ -10,7 +10,7 @@ HTML은 컨텐츠에 의미를 더하기 위한 언어로써 컨텐츠를 설명
 ![image](https://github.com/xoxojw/100-days-of-web-development/assets/124491335/1ab81158-4d8e-4367-aab6-68bbc257e0be)
 
 
-## 1) <!DOCTYPE html>
+## 1) `<!DOCTYPE html>`
 
 - **현재 사용 중인 HTML 버전이 HTML 5라는 의미**
 - HTML의 현재 가장 최신 버전은 2014년에 출시된 HTML 5이다.
