@@ -8,6 +8,7 @@
 ## ✅ 진행 상황
 |완료일|섹션|
 |:----:|----|
-|2024. 01. 07|섹션 1 - 소개, HTML 및 CSS 기초|
-|2024. 01. 08|섹션 2 - HTML, CSS 개념 정리|
-|2024. 01. 09|섹션 8 - 반응형 웹 디자인 이해하기|
+|2024. 01. 07|[섹션 1 - 소개, HTML 및 CSS 기초](https://github.com/xoxojw/100-days-of-web-development/tree/02-html-css-basics)|
+|2024. 01. 08|[섹션 2 - HTML, CSS 개념 정리](https://github.com/xoxojw/100-days-of-web-development/tree/03-html-css-deep-dive)|
+|2024. 01. 09|[섹션 8 - 반응형 웹 디자인 이해 - em/rem/%, 미디어 쿼리](https://github.com/xoxojw/100-days-of-web-development/tree/08-responsive-web-design)|
+|2024. 01. 10|[섹션 9 - 멋있는 웹사이트 만들기 - css 변수, html/:root/*선택자, 변환과 전환, svg](https://github.com/xoxojw/100-days-of-web-development/tree/09-web-design-adv-css)|
