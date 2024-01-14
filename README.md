@@ -1,6 +1,6 @@
 # 💯 100일 코딩 챌린지 - Web Development 부트캠프
 - 📅 시작 - 2024. 1. 7
-- 🧑‍🏫 강의 - [Udemy The Web Developer 부트캠프 2024](https://www.udemy.com/course/the-web-developer-bootcamp-2021-korea/)
+- 🧑‍🏫 강의 - [Udemy 100일 코딩 챌린지 - Web Development 부트캠프](https://www.udemy.com/course/100-2022-web-development/)
 - 🌌 방식 - 각 섹션별로 브랜치를 나누고 해당 브랜치에 공부한 내용 커밋
 
 <br />
