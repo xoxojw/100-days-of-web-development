@@ -15,3 +15,4 @@
 |2024. 01. 11|[섹션 11 - 자바스크립트 기초 이해하기](https://github.com/xoxojw/100-days-of-web-development/tree/11-javascript-basics)|
 |            |[섹션 12 - 고급 자바 스크립트: DOM을 사용한 작업 - 전역 객체와 DOM, DOM 조작](https://github.com/xoxojw/100-days-of-web-development/tree/12-adv-javascript-dom)|
 |2024. 01. 13|[섹션 12 - 이벤트 객체, DOM 요소의 스타일 변경](https://github.com/xoxojw/100-days-of-web-development/blob/12-adv-javascript-dom/03-event.md)|
+|2024. 01. 14|[섹션 13 - 제어 구조 - Boolean, 비교 및 논리연산자, if문, 반복문](https://github.com/xoxojw/100-days-of-web-development/tree/13-javascript-control-structures)|
