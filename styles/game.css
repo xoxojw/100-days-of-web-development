@@ -3,7 +3,7 @@
 #active-game {
   text-align: center;
   margin: 2rem 0 5rem 0; /* top right bottom left */
-  /* display: none; */
+  display: none;
 }
 
 #game-over {
@@ -30,7 +30,7 @@
 #active-player-name {
   font-size: 1.4rem;
   font-weight: bold;
-  color: var(--color-secondary-500);
+  color: var(--color-yellow);
 }
 
 #game-board {

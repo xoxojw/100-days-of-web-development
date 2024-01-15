@@ -11,8 +11,9 @@ html {
   --color-primary-500: #00aaaa;
   --color-primary-700: #276060;
 
-  --color-secondary-500: #ffff44;
-
+  --color-yellow: #ffff44;
+  --color-green: #00ff00;
+  --color-skyblue: #00e3f1;
   --color-purple: #730e73;
   --color-light-gray: #d4d4d4;
   
@@ -36,7 +37,7 @@ body::-webkit-scrollbar {
 #main-header {
   max-width: 50rem;
   width: 80%;
-  margin: 3rem auto;
+  margin: 2rem auto;
   padding: 2rem 2%;
   background-color: var(--color-primary-500);
   color: white;
@@ -46,8 +47,9 @@ body::-webkit-scrollbar {
 
 #main-header h1 {
   color: #000;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   line-height: 0.8;
+  padding: 0 1rem;
 }
 
 .btn {
@@ -90,7 +92,7 @@ footer {
   padding-bottom: 1rem;
 
   a {
-    color: var(--color-secondary-500);
+    color: var(--color-yellow);
     text-decoration: none;
   }
   a:hover,

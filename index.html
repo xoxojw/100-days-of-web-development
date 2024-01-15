@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>틱택토 게임 👾🎮</title>
+    <title>👾 틱택토 게임 🎮</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
@@ -23,7 +23,6 @@
     <header id="main-header">
       <h1>👾 틱택토 게임 🎮</h1>
       <h2>Play Tic, Tac, Toe</h2>
-      <p>바닐라 자바스크립트로 - 물론 🩷도 가득 담아 - 제작되었습니다!</p>
     </header>
     <main>
       <aside class="modal" id="config-overlay">
@@ -42,11 +41,15 @@
         </form>
       </aside>
       <section id="game-configuration">
+        <div id="game-guide">
+          <p>게임을 시작하기 전 <span>플레이어 이름을 설정</span>해주세요.</p>
+          <p>선공 순서는 <span>랜덤</span>입니다!</p>
+        </div>
         <ol>
           <li>
             <article id="player-1-data">
               <h2>플레이어 1</h2>
-              <h3>영희</h3>
+              <h3>플레이어 이름</h3>
               <p class="player-symbol">X</p>
               <button class="btn btn-alt" id="edit-player-1-btn" data-playerid="1">
                 수정
@@ -56,7 +59,7 @@
           <li>
             <article id="player-2-data">
               <h2>플레이어 2</h2>
-              <h3>철수</h3>
+              <h3>플레이어 이름</h3>
               <p class="player-symbol">O</p>
               <button class="btn btn-alt" id="edit-player-2-btn" data-playerid="2">
                 수정
@@ -64,7 +67,7 @@
             </article>
           </li>
         </ol>
-        <button class="btn">새 게임 시작!</button>
+        <button class="btn" id="start-game-btn">새 게임 시작!</button>
       </section>
 
       <section id="active-game">
@@ -75,15 +78,15 @@
 
         <p id="active-player-statement"><span id="active-player-name">PLAYER NAME</span>&nbsp;님의 차례입니다!</p>
         <ol id="game-board">
-          <li class="disabled">X</li>
           <li></li>
-          <li class="disabled">O</li>
-
           <li></li>
-          <li class="disabled">X</li>
           <li></li>
 
-          <li class="disabled">O</li>
+          <li></li>
+          <li></li>
+          <li></li>
+
+          <li></li>
           <li></li>
           <li></li>
         </ol>
@@ -91,7 +94,7 @@
     </main>
 
     <footer>
-      <p>폰트 및 컨셉 컬러 참고 -&nbsp;<a href="https://cactus.tistory.com/193" target="_blank">디자이너 길형진 블로그</a></p>
+      <p>폰트 및 컨셉 컬러 참고 -&nbsp;<a href="https://cactus.tistory.com/193" target="_blank">길형진 디자이너 블로그</a></p>
     </footer>
   </body>
 </html>

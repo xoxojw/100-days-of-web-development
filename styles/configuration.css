@@ -42,6 +42,18 @@
   text-align: center;
 }
 
+#game-guide {
+  color: #fff;
+}
+
+#game-guide p:first-child span {
+  color: var(--color-green);
+}
+
+#game-guide p:nth-child(2) span {
+  color: var(--color-skyblue);
+}
+
 #game-configuration ol {
   list-style: none;
   margin: 0;
