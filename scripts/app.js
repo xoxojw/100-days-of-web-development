@@ -1,6 +1,20 @@
-const playerConfigOverlayElement = document.getElementById('config-overlay'); // 모달창
-const backdropElement = document.getElementById('backdrop'); // 모달창 외부영역 클릭으로 모달창을 종료하는 배경
+let editedPlayer = 0;
+
+const players = [
+  {
+    name: '',
+    symbol: 'X',
+  },
+  {
+    name: '',
+    symbol: 'O',
+  },
+];
+
+const backdropElement = document.getElementById('backdrop');
+const playerConfigOverlayElement = document.getElementById('config-overlay');
 const formElement = document.querySelector('form');
+const errorsOutputElement = document.getElementById('config-errors');
 
 const editPlayer1BtnElement = document.getElementById('edit-player-1-btn');
 const editPlayer2BtnElement = document.getElementById('edit-player-2-btn');

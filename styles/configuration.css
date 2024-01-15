@@ -9,7 +9,7 @@
 }
 
 .form-control {
-  margin: 0.5rem 0;
+  margin: 1rem 0;
 }
 
 .form-control label {
@@ -23,6 +23,16 @@
   border: 1px solid rgb(204, 204, 204);
   width: 15rem;
   padding: 0.35rem;
+}
+
+.error label {
+  color: var(--color-error-500);
+}
+
+.error input {
+  border-color: var(--color-error-500);
+  color: var(--color-error-500);
+  background-color: var(--color-error-100);
 }
 
 #game-configuration {

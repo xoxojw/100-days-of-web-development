@@ -34,8 +34,9 @@
             <label for="playername">플레이어 이름</label>
             <input type="text" name="playername" id="playername" autocomplete="off" />
           </div>
+          <p id="config-errors"></p>
           <div>
-            <button type="button" class="btn btn-alt" id="cancel-config-btn">취소</button>
+            <button type="reset" class="btn btn-alt" id="cancel-config-btn">취소</button>
             <button type="submit" class="btn">확인</button>
           </div>
         </form>
@@ -43,19 +44,23 @@
       <section id="game-configuration">
         <ol>
           <li>
-            <article>
+            <article id="player-1-data">
               <h2>플레이어 1</h2>
               <h3>영희</h3>
               <p class="player-symbol">X</p>
-              <button class="btn btn-alt" id="edit-player-1-btn">수정</button>
+              <button class="btn btn-alt" id="edit-player-1-btn" data-playerid="1">
+                수정
+              </button>
             </article>
           </li>
           <li>
-            <article>
+            <article id="player-2-data">
               <h2>플레이어 2</h2>
               <h3>철수</h3>
               <p class="player-symbol">O</p>
-              <button class="btn btn-alt" id="edit-player-2-btn">수정</button>
+              <button class="btn btn-alt" id="edit-player-2-btn" data-playerid="2">
+                수정
+              </button>
             </article>
           </li>
         </ol>

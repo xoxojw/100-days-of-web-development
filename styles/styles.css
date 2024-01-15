@@ -8,14 +8,16 @@
 html {
   --color-primary-100: #d0e7e7;
   --color-primary-300: #64aeae;
-  --color-primary-500: #00AAAA;
+  --color-primary-500: #00aaaa;
   --color-primary-700: #276060;
 
-  --color-secondary-500: #FFFF44;
+  --color-secondary-500: #ffff44;
 
-  --color-purple: #730E73;
-
+  --color-purple: #730e73;
   --color-light-gray: #d4d4d4;
+  
+  --color-error-100: #e1c9c1;
+  --color-error-500: #d36161;
 
   --color-bg-color: #0a0a78;
 }
@@ -89,5 +91,23 @@ footer {
 
   a {
     color: var(--color-secondary-500);
+    text-decoration: none;
   }
+  a:hover,
+  a:focus {
+    animation-duration: 2.5s;
+    animation-name: rainbowLink;
+    animation-iteration-count: infinite;
+  }
+}
+  
+@keyframes rainbowLink {
+  0% { color: #ff2a2a; }
+  15% { color: #ff7a2a; }
+  30% { color: #ffc52a; }
+  45% { color: #43ff2a; }
+  60% { color: #2a89ff; }
+  75% { color: #202082; }
+  90% { color: #6b2aff; } 
+  100% { color: #e82aff; }
 }
