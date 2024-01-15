@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  --color-primary-100: #d0e7e7;
+  --color-primary-300: #64aeae;
+  --color-primary-500: #00AAAA;
+  --color-primary-700: #276060;
+
+  --color-secondary-500: #FFFF44;
+
+  --color-purple: #730E73;
+
+  --color-light-gray: #d4d4d4;
+
+  --color-bg-color: #0a0a78;
+}
+
+body {
+  margin: 0;
+  font-family: 'DungGeunMo', sans-serif;
+  color: rgb(114, 114, 114);
+  background-color: var(--color-bg-color);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#main-header {
+  max-width: 50rem;
+  width: 80%;
+  margin: 3rem auto;
+  padding: 2rem 2%;
+  background-color: var(--color-primary-500);
+  color: white;
+  text-align: center;
+  box-shadow: 10px 10px 0 #000;
+}
+
+#main-header h1 {
+  color: #000;
+  font-size: 2.2rem;
+  line-height: 0.8;
+}
+
+.btn {
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--color-primary-500);
+  border: 1px solid var(--color-primary-500);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-alt {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-primary-500);
+}
+
+.btn:hover {
+  background-color: var(--color-primary-300);
+  border-color: var(--color-primary-300);
+}
+
+.btn-alt:hover {
+  background-color: var(--color-primary-100);
+  border-color: transparent;
+}
+
+#wrapper{
+  height: auto;
+  min-height: 100%;
+  padding-bottom: 4rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  height: 4rem;
+  color: rgb(217, 217, 217);
+  padding-bottom: 1rem;
+
+  a {
+    color: var(--color-secondary-500);
+  }
+}
