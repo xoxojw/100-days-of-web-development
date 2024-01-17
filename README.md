@@ -1,19 +1,58 @@
-# 💯 100일 코딩 챌린지 - Web Development 부트캠프
-- 📅 시작 - 2024. 1. 7
-- 🧑‍🏫 강의 - [Udemy 100일 코딩 챌린지 - Web Development 부트캠프](https://www.udemy.com/course/100-2022-web-development/)
-- 🌌 방식 - 각 섹션별로 브랜치를 나누고 해당 브랜치에 공부한 내용 커밋
+# 호스팅 & 배포란?
 
-<br />
+![image](https://github.com/xoxojw/100-days-of-web-development/assets/124491335/3ba76cd5-6a3f-4376-8150-e94f22895f64)
 
-## ✅ 진행 상황
-|완료일|섹션|
-|:----:|----|
-|2024. 01. 07|[섹션 1 - 소개, HTML 및 CSS 기초](https://github.com/xoxojw/100-days-of-web-development/tree/02-html-css-basics)|
-|2024. 01. 08|[섹션 2 - HTML, CSS 개념 정리](https://github.com/xoxojw/100-days-of-web-development/tree/03-html-css-deep-dive)|
-|2024. 01. 09|[섹션 8 - 반응형 웹 디자인 이해 - em/rem/%, 미디어 쿼리](https://github.com/xoxojw/100-days-of-web-development/tree/08-responsive-web-design)|
-|2024. 01. 10|[섹션 9 - 멋있는 웹사이트 만들기 - css 변수, html/:root/*선택자, 변환과 전환, svg](https://github.com/xoxojw/100-days-of-web-development/tree/09-web-design-adv-css)|
-|2024. 01. 11|[섹션 11 - 자바스크립트 기초 이해하기](https://github.com/xoxojw/100-days-of-web-development/tree/11-javascript-basics)|
-|            |[섹션 12 - 고급 자바 스크립트: DOM을 사용한 작업 - 전역 객체와 DOM, DOM 조작](https://github.com/xoxojw/100-days-of-web-development/tree/12-adv-javascript-dom)|
-|2024. 01. 13|[섹션 12 - 이벤트 객체, DOM 요소의 스타일 변경](https://github.com/xoxojw/100-days-of-web-development/blob/12-adv-javascript-dom/03-event.md)|
-|2024. 01. 14|[섹션 13 - 제어 구조 - Boolean, 비교 및 논리연산자, if문, 반복문](https://github.com/xoxojw/100-days-of-web-development/tree/13-javascript-control-structures)|
-|2024. 01. 15|[섹션 14 - 틱택토 게임 - 플레이어 설정하기 - 모달, FormData, 유효성 검사와 에러 메시지, data-* ](https://github.com/xoxojw/100-days-of-web-development/tree/14-tic-tac-toe-game)|
+<br>
+
+## 배포
+
+단순히 웹사이트 코드를 취하는 것을 의미한다. 개발된 웹앱 또는 웹사이트를 실제로 인터넷에 공개하여 실행 가능하도록 만드는 과정이다.
+
+### 파일 전송
+
+개발한 웹사이트 파일들을 로컬 개발 환경에서 웹호스팅 서버로 전송하여야 한다. 이는 주로 FTP(File Transfer Protocol), SCP(Secure Copy Protocol) 등을 사용하여 이루어진다.
+
+### 환경 설정
+
+웹사이트가 실행될 호스팅 서버에서는 필요한 서버 소프트웨어, DB 설정, 보안 설정 등이 완료되어야 한다.
+
+### 도메인 구성
+
+IP 주소 대신 도메인을 사용한다. 사용자들이 기억하기 쉽기 때문이다.
+
+<br>
+
+## 호스팅
+
+웹페이지, 이미지, 스크립트 등 웹사이트의 모든 파일을 저장하고 관리하는 프로세스이다.
+
+### 호스팅 서버
+
+웹호스팅 서비스를 제공업체는 고객이 만든 웹사이트 파일을 저장할 서버를 제공한다. 이 서버는 일반적으로 데이터 센터에 위치하며 전세계 사용자에게 빠르고 안정적인 액세스를 제공한다.
+
+### 서버 유형
+
+공유 호스팅, VPS(가상 사설 서버), 전용 서버 등 다양한 호스팅 옵션이 있다.
+
+## HTTPS 보안 및 사용자 지정 도메인
+
+https://tic-tac-toe-retro-game.netlify.app/
+
+Netlify에서 제공하는 도메인에는 자동으로 HTTPS가 포함되어 있다.
+
+이것은 Netlify를 포함한 많은 호스팅 공급업체들이 이미 HTTP 보안 서비스를 즉시 사용할 수 있도록 제공하고 있다는 의미이다.
+
+다른 곳에서 커스텀 도메인을 구매하여 Netlify로 배포한 이 사이트에 적용해도 HTTPS는 여전히 유효한데, HTTPS는 도메인이 아닌 서버에 한정되기 때문이다.
+
+<br>
+<br>
+
+# 파비콘
+
+파비콘은 브라우저가 사이트 이름 옆에 표시하기 위해 사용하는 작은 아이콘을 의미한다.
+
+![image](https://github.com/xoxojw/100-days-of-web-development/assets/124491335/08d34b35-3902-4484-ba96-f0432091cdc7)
+
+콘솔과 네트워크에서 에러를 확인할 수 있다.
+
+GET http://127.0.0.1:5500/favicon.ico 404 (Not Found)
