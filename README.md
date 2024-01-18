@@ -1,21 +1,18 @@
-# 💯 100일 코딩 챌린지 - Web Development 부트캠프
-- 📅 시작 - 2024. 1. 7
-- 🧑‍🏫 강의 - [Udemy 100일 코딩 챌린지 - Web Development 부트캠프](https://www.udemy.com/course/100-2022-web-development/)
-- 🌌 방식 - 각 섹션별로 브랜치를 나누고 해당 브랜치에 공부한 내용 커밋
+# 섹션 16 백엔드 개발
 
-<br />
+![image](https://github.com/xoxojw/100-days-of-web-development/assets/124491335/56432563-eebd-407b-800a-61e82ce6786a)
 
-## ✅ 진행 상황
-|완료일|섹션|
-|:----:|----|
-|2024. 01. 07|[섹션 1 - 소개, HTML 및 CSS 기초](https://github.com/xoxojw/100-days-of-web-development/tree/02-html-css-basics)|
-|2024. 01. 08|[섹션 2 - HTML, CSS 개념 정리](https://github.com/xoxojw/100-days-of-web-development/tree/03-html-css-deep-dive)|
-|2024. 01. 09|[섹션 8 - 반응형 웹 디자인 이해 - em/rem/%, 미디어 쿼리](https://github.com/xoxojw/100-days-of-web-development/tree/08-responsive-web-design)|
-|2024. 01. 10|[섹션 9 - 멋있는 웹사이트 만들기 - css 변수, html/:root/*선택자, 변환과 전환, svg](https://github.com/xoxojw/100-days-of-web-development/tree/09-web-design-adv-css)|
-|2024. 01. 11|[섹션 11 - 자바스크립트 기초 이해하기](https://github.com/xoxojw/100-days-of-web-development/tree/11-javascript-basics)|
-|            |[섹션 12 - 고급 자바 스크립트: DOM을 사용한 작업 - 전역 객체와 DOM, DOM 조작](https://github.com/xoxojw/100-days-of-web-development/tree/12-adv-javascript-dom)|
-|2024. 01. 13|[섹션 12 - 이벤트 객체, DOM 요소의 스타일 변경](https://github.com/xoxojw/100-days-of-web-development/blob/12-adv-javascript-dom/03-event.md)|
-|2024. 01. 14|[섹션 13 - 제어 구조 - Boolean, 비교 및 논리연산자, if문, 반복문](https://github.com/xoxojw/100-days-of-web-development/tree/13-javascript-control-structures)|
-|2024. 01. 15|[섹션 14 - 틱택토 게임 - 플레이어 설정하기 - 모달, FormData, 유효성 검사와 에러 메시지, data-*](https://github.com/xoxojw/100-days-of-web-development/tree/14-tic-tac-toe-game)|
-|2024. 01. 17|[섹션 14 - 틱택토 게임 - 게임 로직 구성 - 게임 리셋 및 시작, 진행, 승부 및 결과 판단](https://github.com/xoxojw/100-days-of-web-development/blob/14-tic-tac-toe-game/02-game-logic.md)|
-|            |[섹션 5 - 웹사이트 제공 - 호스팅과 배포](https://github.com/xoxojw/100-days-of-web-development/tree/05-serving-a-website)|
+사용자가 보는 프론트엔드 외에도 서버 사이드와 관련한 기능이 필요한 웹사이트들이 있다.
+
+- DB에 데이터를 저장해야 하는 경우, 폼 데이터를 제출하면 그 데이터를 담아두는 DB가 필요하다.
+- 페이스북, 트위터처럼 사용자가 프로필 이미지를 업로드 해야 한다면? 모든 사람들이 사진을 볼 수 있도록 그 파일을 어딘가 중앙 컴퓨터에 저장해야 한다.
+- DB에서 데이터를 로드하여 그 데이터를 기반으로 사용자들에 대한 다양한 HTML 내용을 다시 보낼 수도 있다.
+    - ex. amazon : 아마존의 제품 DB에 저장된 제품 데이터를 이용하여 방문자 맞춤 상품들을 보여준다.
+
+따라서 프론트엔드 웹 개발자로서 실제로 HTML, CSS, 자바스크립트 코드를 작성하는 것 이상으로 해야하는 일들이 있다는 것을 명심할 것. 일부 서버 측 코드를 작성해야 하기도 하고, 그걸 다시 클라이언트로 전송받아야 한다.
+
+<br>
+
+![image](https://github.com/xoxojw/100-days-of-web-development/assets/124491335/6fcb6106-7034-4deb-9423-14204ba8d7e1)
+
+- 브라우저에서만 작동하던 JavaScript를 컴퓨터(서버)에서도 돌아가게 만들어 준 것이 바로 크롬 v8 엔진을 사용한 Node.js이다.
