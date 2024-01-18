@@ -19,3 +19,4 @@
 |2024. 01. 15|[섹션 14 - 틱택토 게임 - 플레이어 설정하기 - 모달, FormData, 유효성 검사와 에러 메시지, data-*](https://github.com/xoxojw/100-days-of-web-development/tree/14-tic-tac-toe-game)|
 |2024. 01. 17|[섹션 14 - 틱택토 게임 - 게임 로직 구성 - 게임 리셋 및 시작, 진행, 승부 및 결과 판단](https://github.com/xoxojw/100-days-of-web-development/blob/14-tic-tac-toe-game/02-game-logic.md)|
 |            |[섹션 5 - 웹사이트 제공 - 호스팅과 배포](https://github.com/xoxojw/100-days-of-web-development/tree/05-serving-a-website)|
+|2024. 01. 18|[섹션 16 - 백엔드 개발 - 어떤 언어들로 할 수 있는가?](https://github.com/xoxojw/100-days-of-web-development/tree/16-about-backend-development)|
