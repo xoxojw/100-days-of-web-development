@@ -22,3 +22,4 @@
 |2024. 01. 18|[섹션 16 - 백엔드 개발 - 어떤 언어들로 할 수 있는가?](https://github.com/xoxojw/100-days-of-web-development/tree/16-about-backend-development)|
 |2024. 01. 19|[섹션 17 - 백엔드 개발 - Node.js로 서버 생성하기](https://github.com/xoxojw/100-days-of-web-development/tree/17-node-js-introduction)|
 |2024. 01. 21|[섹션 18 - Express.js로 Node.js 강화하기](https://github.com/xoxojw/100-days-of-web-development/tree/18-nodejs-expressjs)|
+|2024. 01. 22|[섹션 19 - Express.js - 템플릿을 사용한 정적, 동적 콘텐츠(EJS)](https://github.com/xoxojw/100-days-of-web-development/tree/19-more-about-express)|
