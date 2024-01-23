@@ -23,3 +23,4 @@
 |2024. 01. 19|[섹션 17 - 백엔드 개발 - Node.js로 서버 생성하기](https://github.com/xoxojw/100-days-of-web-development/tree/17-node-js-introduction)|
 |2024. 01. 21|[섹션 18 - Express.js로 Node.js 강화하기](https://github.com/xoxojw/100-days-of-web-development/tree/18-nodejs-expressjs)|
 |2024. 01. 22|[섹션 19 - Express.js - 템플릿을 사용한 정적, 동적 콘텐츠(EJS)](https://github.com/xoxojw/100-days-of-web-development/tree/19-more-about-express)|
+|2024. 01. 23|[섹션 20 - Express.js - 동적 라우팅, 미들웨어 함수로 에러 핸들링 ](https://github.com/xoxojw/100-days-of-web-development/tree/20-handling-dynamic-routes)|
