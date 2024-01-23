@@ -37,7 +37,9 @@ express에서도 React처럼 `/:id` 를 이용해서 동적 라우팅을 할 수
 
 이 때 커스텀 미들웨어를 사용한다. 404는 이미 존재하는 경로에 대한 모든 요청을 처리하고 나서 마지막에 처리되어야 하기 때문에 아래의 이미지처럼 app.js의 마지막 줄에 입력한다. 
 
-![image](https://github.com/xoxojw/100-days-of-web-development/assets/124491335/67425b7e-04f7-4d42-982d-1a708cdc2042)
+<div align="center">
+  <img src="https://github.com/xoxojw/100-days-of-web-development/assets/124491335/b9b0b9ba-5874-4c09-80eb-68e9adb984e7" width="400px" />
+</div>
 
 
 ```jsx
@@ -101,10 +103,7 @@ app.use((error, req, res, next) => {
 
 이 때 실제로 404 에러나 500 에러가 발생하면, 화면만 미리 준비해 둔 ‘Oops, sorry!’같은 에러 페이지만 렌더링할뿐, 아래와 같이 네트워크 탭에서 status를 살펴보면 성공했다며 바보처럼 200으로 처리하고 있다.
 
-<div align="center">
-  <img src="https://github.com/xoxojw/100-days-of-web-development/assets/124491335/b9b0b9ba-5874-4c09-80eb-68e9adb984e7" width="400px" />
-</div>
-
+![image](https://github.com/xoxojw/100-days-of-web-development/assets/124491335/67425b7e-04f7-4d42-982d-1a708cdc2042)
 
 이는 브라우저가 바보라서가 아니라 내가 서버 코드에서 status 처리를 해주지 않아서이므로, 다음과 같이 status 처리를 해주면 실제 브라우저상에서도 표준 상태 코드로 처리되는 것을 확인할 수 있다.
 
