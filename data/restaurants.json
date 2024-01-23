@@ -4,41 +4,15 @@
 		"address": "서울시 강남구",
 		"cuisine": "스테이크",
 		"website": "https://www.outback.co.kr/",
-		"description": "맛있음"
-	},
-	{
-		"name": "테스트",
-		"address": "경기도 과천시",
-		"cuisine": "인도음식",
-		"website": "https://testrestaurant.com",
-		"description": "인도커리 먹고싶어서"
-	},
-	{
-		"name": "테스트2",
-		"address": "서울시 마포구",
-		"cuisine": "초밥",
-		"website": "https://iwannaeatsushi.com",
-		"description": "초밥 안먹은지 오래됨"
+		"description": "스테이크가 정말 맛있어요!",
+		"id": "ba3afb2c-df90-4cdd-9fd2-1db0f2f9b809"
 	},
 	{
 		"name": "목란",
-		"address": "서울 서대문구 연희로15길 21",
+		"address": "서울시 서대문구",
 		"cuisine": "중식당",
 		"website": "https://naver.me/xXrDE2Pm",
-		"description": "유명한데 못가봄"
-	},
-	{
-		"name": "테스트5",
-		"address": "전라남도 목포",
-		"cuisine": "한식",
-		"website": "https://hansikdang.com",
-		"description": "8첩반상 먹고싶다"
-	},
-	{
-		"name": "테스트6",
-		"address": "경상남도 거제",
-		"cuisine": "한식",
-		"website": "https://marinecity.geoje",
-		"description": "테스트"
+		"description": "유명해서 먹어보고 싶어요",
+		"id": "f8a2d06e-2120-4f4f-9f9a-d3a23aeee75c"
 	}
 ]
