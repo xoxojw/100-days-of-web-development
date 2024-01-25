@@ -1,18 +1,1 @@
-[
-	{
-		"name": "아웃백",
-		"address": "서울시 강남구",
-		"cuisine": "스테이크",
-		"website": "https://www.outback.co.kr/",
-		"description": "스테이크가 정말 맛있어요!",
-		"id": "ba3afb2c-df90-4cdd-9fd2-1db0f2f9b809"
-	},
-	{
-		"name": "목란",
-		"address": "서울시 서대문구",
-		"cuisine": "중식당",
-		"website": "https://naver.me/xXrDE2Pm",
-		"description": "유명해서 먹어보고 싶어요",
-		"id": "f8a2d06e-2120-4f4f-9f9a-d3a23aeee75c"
-	}
-]
+[{"name":"아웃백","address":"서울시 강남구","cuisine":"스테이크","website":"https://www.outback.co.kr/","description":"스테이크가 정말 맛있어요!","id":"ba3afb2c-df90-4cdd-9fd2-1db0f2f9b809"},{"name":"목란","address":"서울시 서대문구","cuisine":"중식당","website":"https://naver.me/xXrDE2Pm","description":"유명해서 먹어보고 싶어요","id":"f8a2d06e-2120-4f4f-9f9a-d3a23aeee75c"},{"name":"윤식당","address":"서울시 어딘가","cuisine":"한식당","website":"https://hansikdang.com","description":"생각나는 식당 이름이 없어","id":"89dbfc42-a147-4417-8def-7f18d1ad7a8a"}]

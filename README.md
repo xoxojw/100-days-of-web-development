@@ -122,3 +122,144 @@ app.use((error, req, res, next) => {
 ![image](https://github.com/xoxojw/100-days-of-web-development/assets/124491335/d8e0d396-0ec1-44a7-973b-02a5527512d1)
 
 <br>
+<br>
+
+# Optimazaing Our Code
+
+## 모듈 분리
+
+### Node.js 모듈 내보내는 법
+
+```jsx
+// 기본 문법
+module.exports = { };
+```
+
+```jsx
+// 예시
+const fs = require('fs');
+const path = require('path');
+
+const filePath = path.join(__dirname, '..', 'data', 'restaurants.json');
+
+const getStoredRestaurants = () => {
+  const fileData = fs.readFileSync(filePath);
+  const storedRestaurants = JSON.parse(fileData);
+
+  return storedRestaurants;
+};
+
+const storeRestaurants = (storableRestaurants) => {
+  fs.writeFileSync(filePath, JSON.stringify(storableRestaurants));
+};
+
+module.exports = { getStoredRestaurants, storeRestaurants };
+```
+
+### Node.js 모듈 불러오는 법
+
+```jsx
+// 기본 문법
+const resData = require();
+```
+
+```jsx
+// 예시
+app.get('/restaurants', (req, res) => {
+	const restaurantsData = resData.getStoredRestaurants();
+
+	res.render('restaurants', {
+		numberOfRestaurants: restaurantsData.length,
+		restaurants: restaurantsData,
+	});
+});
+```
+
+<br>
+<br>
+
+# Express router로 라우트 구성하기
+
+```jsx
+// app.js
+const express = require('express');
+const app = express();
+
+app.use('/', defaultRoutes);
+```
+
+```jsx
+const express = require('express');
+
+const router = express.Router();
+
+router.get('/', (req, res) => {
+	res.render('index');
+});
+
+router.get('/about', (req, res) => {
+	res.render('about');
+});
+
+module.exports = router;
+```
+
+<br>
+
+## 쿼리 매개변수
+
+```jsx
+// restaurants.ejs
+<form action="/restaurants" method="GET">
+  <input type="hidden" value="adc" name="order" />
+  <button class="btn">Change Order</button>
+</form>
+```
+
+![image](https://github.com/xoxojw/100-days-of-web-development/assets/124491335/278def78-b6ca-44ea-80a3-afe42d74448c)
+
+- `Change Order` 버튼을 누르면 url에 쿼리 매개변수 `order=adc`가 넘어오는 것을 볼 수 있다. 이를 이용해서 `Change Order` 버튼을 누를 때마다 오름차순, 내림차순을 번갈아가며 정렬할 수 있도록 할 수 있다.
+
+```jsx
+// views/restaurants.ejs
+<form action="/restaurants" method="GET">
+  <input type="hidden" value="<%= nextOrder %>" name="order" />
+  <button class="btn">Change Order</button>
+</form>
+```
+
+```jsx
+// routes/restaurants.js
+router.get('/restaurants', (req, res) => {
+	let order = req.query.order;
+	let nextOrder = 'desc';
+
+	if (order !== 'asc' && order !== 'desc') {
+		order = 'asc';
+	}
+
+	if (order === 'desc') {
+		nextOrder = 'asc';
+	}
+
+	const restaurantsData = resData.getStoredRestaurants();
+
+	restaurantsData.sort((resA, resB) => {
+		if (
+			(order === "asc" && resA.name > resB.name) ||
+			(order === "desc" && resB.name > resA.name)
+		) {
+			return 1;
+		}
+		return -1;
+	});
+
+	res.render('restaurants', {
+		numberOfRestaurants: restaurantsData.length,
+		restaurants: restaurantsData,
+		nextOrder: nextOrder,
+	});
+});
+```
+
+<br>
