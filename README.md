@@ -24,3 +24,5 @@
 |2024. 01. 21|[섹션 18 - Express.js로 Node.js 강화하기](https://github.com/xoxojw/100-days-of-web-development/tree/18-nodejs-expressjs)|
 |2024. 01. 22|[섹션 19 - Express.js - 템플릿을 사용한 정적, 동적 콘텐츠(EJS)](https://github.com/xoxojw/100-days-of-web-development/tree/19-more-about-express)|
 |2024. 01. 23|[섹션 20 - Express.js - 동적 라우팅, 미들웨어 함수로 에러 핸들링 ](https://github.com/xoxojw/100-days-of-web-development/tree/20-handling-dynamic-routes)|
+|2024. 01. 25|[섹션 20 - Express.js - 모듈 분리, 쿼리 매개변수 ](https://github.com/xoxojw/100-days-of-web-development/tree/20-handling-dynamic-routes)|
+|            |[섹션 21 - 고급 자바스크립트 - 함수에서 객체와 배열의 동작, 원시값과 참조값 ](https://github.com/xoxojw/100-days-of-web-development/blob/21-more-adv-javascript/01_%ED%95%A8%EC%88%98-%EC%9B%90%EC%8B%9C%EA%B0%92-%EC%B0%B8%EC%A1%B0%EA%B0%92.md)|
