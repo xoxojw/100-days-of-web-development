@@ -28,3 +28,4 @@
 |            |[섹션 21 - 고급 자바스크립트 - 함수에서 객체와 배열의 동작, 원시값과 참조값](https://github.com/xoxojw/100-days-of-web-development/blob/21-more-adv-javascript/01_%ED%95%A8%EC%88%98-%EC%9B%90%EC%8B%9C%EA%B0%92-%EC%B0%B8%EC%A1%B0%EA%B0%92.md)|
 |2024. 01. 26|[섹션 21 - 고급 자바스크립트 - 스코프, 객체의 생성, 클래스, 비동기 프로그래밍](https://github.com/xoxojw/100-days-of-web-development/tree/21-more-adv-javascript)|
 |2024. 01. 28|[섹션 22 - 데이터베이스 - SQL vs NoSQL](https://github.com/xoxojw/100-days-of-web-development/tree/22-about-the-database)|
+|2024. 01. 29|[섹션 23 - 데이터베이스 - MySQL 설치 및 SQL 코드 작성](https://github.com/xoxojw/100-days-of-web-development/tree/23-sql-databases-intro)|
