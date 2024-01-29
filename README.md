@@ -16,6 +16,9 @@ MySQL, PostgreSQL, Microsoft SQL 등… 다양하지만 MySQL을 설치해서 �
 
 설치 후 `시스템 설정 - MySQL`에서 서버를 켜고 끌 수 있다.
 
+<br>
+<br>
+
 ## 📌 Database System vs Database
 
 MySQL은 소프트웨어 자체이다.
