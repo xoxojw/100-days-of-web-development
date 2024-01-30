@@ -134,4 +134,104 @@ SELECT COUNT(*) FROM restaurants WHERE name > 'ㅊ'
 ```
 
 <br>
+
+### 데이터 업데이트 및 삭제
+
+- 업데이트
+
+```sql
+UPDATE restaurants SET name = '아웃백 스테이크 하우스' WHERE id = 1
+```
+
+<br>
+
+- 삭제
+
+```sql
+DELETE FROM restaurants WHERE id = 1
+```
+
+<br>
+<br>
+
+## 조금 더 복잡한 DB 설계
+
+![image](https://github.com/xoxojw/100-days-of-web-development/assets/124491335/fd1af89e-1791-4500-9874-c2c4c0b70968)
+
+![image](https://github.com/xoxojw/100-days-of-web-development/assets/124491335/a40b951c-9bdf-4213-a765-4a0e8d0646d1)
+
+![image](https://github.com/xoxojw/100-days-of-web-development/assets/124491335/8ea478be-7d46-4297-8bf1-e802af75e688)
+
+![image](https://github.com/xoxojw/100-days-of-web-development/assets/124491335/64661e24-5720-42a6-8d83-3fdf0e4c1199)
+
+![image](https://github.com/xoxojw/100-days-of-web-development/assets/124491335/32b9b9e7-408c-4253-8526-e87a5a394729)
+
+<br>
+<br>
+
+## 관련 데이터 쿼리 및 테이블 조인하기
+
+### `INNER JOIN` table_name `ON` condition
+
+- restaurants 테이블의 address_id를 이용하여 addresses 테이블과 조인
+
+```sql
+SELECT * FROM restaurants
+INNER JOIN addresses ON (restaurants.address_id = addresses.id);
+```
+
+
+- 조인하여 가져오고 싶은 정보(restaurants 테이블의 id, name)만 쿼리하기
+
+```sql
+SELECT restaurants.id, restaurants.name, addresses.* FROM restaurants
+INNER JOIN addresses ON (restaurants.address_id = addresses.id);
+```
+
+
+- 여러 테이블을 조인할 수도 있다.
+
+```sql
+SELECT restaurants.id, restaurants.name, addresses.*, types.name AS type_name FROM restaurants
+INNER JOIN addresses ON (restaurants.address_id = addresses.id)
+INNER JOIN types ON (restaurants.type_id = types.id)
+WHERE addresses.province = '서울특별시'
+```
+
+![image](https://github.com/xoxojw/100-days-of-web-development/assets/124491335/8233516f-7733-4a94-a871-7345c7b40ca0)
+
+<br>
+
+### 도전과제
+
+1. 평점이 3보다 큰 리뷰를 모두 선택하는 쿼리 작성하기
+    
+    ```sql
+    SELECT * FROM reviews WHERE rating > 3
+    ```
+    
+2. 모든 레스토랑 데이터, 레스토랑의 전체 주소 데이터 및 전체 유형 데이터를 조인하여 result grid에 나타내보기
+    
+    ```sql
+    SELECT * FROM reviews
+    INNER JOIN restaurants ON reviews.restaurant_id = restaurants.id
+    INNER JOIN addresses ON restaurants.address_id = addresses.id
+    INNER JOIN types on restaurants.type_id = types.id
+    WHERE rating > 3
+    ```
+    
+
+- 조건 좀 더 추가해보기
+
+  ```sql
+  SELECT restaurants.name AS restaurant_name, types.name AS restaurant_type, reviews.reviewer_name, reviews.rating, reviews.text, addresses.*FROM reviews
+  INNER JOIN restaurants ON reviews.restaurant_id = restaurants.id
+  INNER JOIN addresses ON restaurants.address_id = addresses.id
+  INNER JOIN types on restaurants.type_id = types.id
+  WHERE rating > 3
+  ```
+
+![image](https://github.com/xoxojw/100-days-of-web-development/assets/124491335/178d453b-f00d-4ffa-9b6c-936d13729610)
+
+<br>
 <br>
