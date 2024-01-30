@@ -29,3 +29,4 @@
 |2024. 01. 26|[섹션 21 - 고급 자바스크립트 - 스코프, 객체의 생성, 클래스, 비동기 프로그래밍](https://github.com/xoxojw/100-days-of-web-development/tree/21-more-adv-javascript)|
 |2024. 01. 28|[섹션 22 - 데이터베이스 - SQL vs NoSQL](https://github.com/xoxojw/100-days-of-web-development/tree/22-about-the-database)|
 |2024. 01. 29|[섹션 23 - 데이터베이스 - MySQL 설치 및 SQL 코드 작성](https://github.com/xoxojw/100-days-of-web-development/tree/23-sql-databases-intro)|
+|2024. 01. 30|[섹션 23 - 데이터베이스 - MySQL 테이블 쿼리, 조인하기](https://github.com/xoxojw/100-days-of-web-development/tree/23-sql-databases-intro)|
