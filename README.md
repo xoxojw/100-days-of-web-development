@@ -30,3 +30,4 @@
 |2024. 01. 28|[섹션 22 - 데이터베이스 - SQL vs NoSQL](https://github.com/xoxojw/100-days-of-web-development/tree/22-about-the-database)|
 |2024. 01. 29|[섹션 23 - 데이터베이스 - MySQL 설치 및 SQL 코드 작성](https://github.com/xoxojw/100-days-of-web-development/tree/23-sql-databases-intro)|
 |2024. 01. 30|[섹션 23 - 데이터베이스 - MySQL 테이블 쿼리, 조인하기](https://github.com/xoxojw/100-days-of-web-development/tree/23-sql-databases-intro)|
+|2024. 02. 04|[섹션 24 - Node.js&MySQL - Node.js 프로젝트에 MySQL DB 연결 후 데이터 가져오기](https://github.com/xoxojw/100-days-of-web-development/tree/24-mysql-in-nodejs)|
