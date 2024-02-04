@@ -97,7 +97,7 @@ INSERT INTO blog.authors (name, email) VALUES ('Yujin An', 'yujin@test.com');
     
 <br>
 
-이 때 user나 password 등을 포함한 민감한 정보는 환경변수로 설정해주는 것이 보안상 좋을 것 같았다. 그래서 `.env` 파일을 만들고 React나 Next.js에서 사용했던 것처럼 `proces.env.DB_USER` 처럼 바로 사용하려고 했더니 아래의 에러 메시지와 함께 비밀번호를 인식하지 못했다.
+이 때 user나 password 등을 포함한 민감한 정보는 환경변수로 설정해주는 것이 보안상 좋을 것 같았다. 그래서 `.env` 파일을 만들고 React나 Next.js에서 사용했던 것처럼 `proces.env.DB_USER` 형식으로 바로 사용하려고 했더니 아래의 에러 메시지와 함께 비밀번호를 인식하지 못했다.
 
 ```
 Error: Access denied for user 'user'@'localhost' (using password: NO)
