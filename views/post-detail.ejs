@@ -9,13 +9,16 @@
 <body>
   <%- include('includes/header') %>
   <main id="post-detail">
-    <h1>...</h1>
+    <h1><%= post.title %></h1>
     <section id="post-meta">
-      ...
+      <!-- address 태그는 일반적인 주소뿐 아니라 이메일 주소를 나타낼 때도 사용 -->
+      <address><a href="mailto:<%= post.author_email %>"><%= post.author_name %></a></address> |
+      <!-- datetime 특성의 값: 기계가 읽을 수 있게 형식에 맞추어 작성 -->
+      <time datetime="<%= post.date %>"><%= post.humanReadableDate %></time>
     </section>
     <hr>
     <section>
-      <p id="body">...</p>
+      <p id="body"><%= post.body %></p>
     </section>
   </main>
 </body>
