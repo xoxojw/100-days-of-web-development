@@ -1,34 +1,132 @@
-# 💯 100일 코딩 챌린지 - Web Development 부트캠프
-- 📅 시작 - 2024. 1. 7
-- 🧑‍🏫 강의 - [Udemy 100일 코딩 챌린지 - Web Development 부트캠프](https://www.udemy.com/course/100-2022-web-development/)
-- 🌌 방식 - 각 섹션별로 브랜치를 나누고 해당 브랜치에 공부한 내용 커밋
+# NoSQL - MongoDB
 
-<br />
+## NoSQL DB의 특징
 
-## ✅ 진행 상황
-|완료일|섹션|
-|:----:|----|
-|2024. 01. 07|[섹션 1 - 소개, HTML 및 CSS 기초](https://github.com/xoxojw/100-days-of-web-development/tree/02-html-css-basics)|
-|2024. 01. 08|[섹션 2 - HTML, CSS 개념 정리](https://github.com/xoxojw/100-days-of-web-development/tree/03-html-css-deep-dive)|
-|2024. 01. 09|[섹션 8 - 반응형 웹 디자인 이해 - em/rem/%, 미디어 쿼리](https://github.com/xoxojw/100-days-of-web-development/tree/08-responsive-web-design)|
-|2024. 01. 10|[섹션 9 - 멋있는 웹사이트 만들기 - css 변수, html/:root/*선택자, 변환과 전환, svg](https://github.com/xoxojw/100-days-of-web-development/tree/09-web-design-adv-css)|
-|2024. 01. 11|[섹션 11 - 자바스크립트 기초 이해하기](https://github.com/xoxojw/100-days-of-web-development/tree/11-javascript-basics)|
-|            |[섹션 12 - 고급 자바 스크립트: DOM을 사용한 작업 - 전역 객체와 DOM, DOM 조작](https://github.com/xoxojw/100-days-of-web-development/tree/12-adv-javascript-dom)|
-|2024. 01. 13|[섹션 12 - 이벤트 객체, DOM 요소의 스타일 변경](https://github.com/xoxojw/100-days-of-web-development/blob/12-adv-javascript-dom/03-event.md)|
-|2024. 01. 14|[섹션 13 - 제어 구조 - Boolean, 비교 및 논리연산자, if문, 반복문](https://github.com/xoxojw/100-days-of-web-development/tree/13-javascript-control-structures)|
-|2024. 01. 15|[섹션 14 - 틱택토 게임 - 플레이어 설정하기 - 모달, FormData, 유효성 검사와 에러 메시지, data-*](https://github.com/xoxojw/100-days-of-web-development/tree/14-tic-tac-toe-game)|
-|2024. 01. 17|[섹션 14 - 틱택토 게임 - 게임 로직 구성 - 게임 리셋 및 시작, 진행, 승부 및 결과 판단](https://github.com/xoxojw/100-days-of-web-development/blob/14-tic-tac-toe-game/02-game-logic.md)|
-|            |[섹션 5 - 웹사이트 제공 - 호스팅과 배포](https://github.com/xoxojw/100-days-of-web-development/tree/05-serving-a-website)|
-|2024. 01. 18|[섹션 16 - 백엔드 개발 - 어떤 언어들로 할 수 있는가?](https://github.com/xoxojw/100-days-of-web-development/tree/16-about-backend-development)|
-|2024. 01. 19|[섹션 17 - 백엔드 개발 - Node.js로 서버 생성하기](https://github.com/xoxojw/100-days-of-web-development/tree/17-node-js-introduction)|
-|2024. 01. 21|[섹션 18 - Express.js로 Node.js 강화하기](https://github.com/xoxojw/100-days-of-web-development/tree/18-nodejs-expressjs)|
-|2024. 01. 22|[섹션 19 - Express.js - 템플릿을 사용한 정적, 동적 콘텐츠(EJS)](https://github.com/xoxojw/100-days-of-web-development/tree/19-more-about-express)|
-|2024. 01. 23|[섹션 20 - Express.js - 동적 라우팅, 미들웨어 함수로 에러 핸들링](https://github.com/xoxojw/100-days-of-web-development/tree/20-handling-dynamic-routes)|
-|2024. 01. 25|[섹션 20 - Express.js - 모듈 분리, 쿼리 매개변수 ](https://github.com/xoxojw/100-days-of-web-development/tree/20-handling-dynamic-routes)|
-|            |[섹션 21 - 고급 자바스크립트 - 함수에서 객체와 배열의 동작, 원시값과 참조값](https://github.com/xoxojw/100-days-of-web-development/blob/21-more-adv-javascript/01_%ED%95%A8%EC%88%98-%EC%9B%90%EC%8B%9C%EA%B0%92-%EC%B0%B8%EC%A1%B0%EA%B0%92.md)|
-|2024. 01. 26|[섹션 21 - 고급 자바스크립트 - 스코프, 객체의 생성, 클래스, 비동기 프로그래밍](https://github.com/xoxojw/100-days-of-web-development/tree/21-more-adv-javascript)|
-|2024. 01. 28|[섹션 22 - 데이터베이스 - SQL vs NoSQL](https://github.com/xoxojw/100-days-of-web-development/tree/22-about-the-database)|
-|2024. 01. 29|[섹션 23 - 데이터베이스 - MySQL 설치 및 SQL 코드 작성](https://github.com/xoxojw/100-days-of-web-development/tree/23-sql-databases-intro)|
-|2024. 01. 30|[섹션 23 - 데이터베이스 - MySQL 테이블 쿼리, 조인하기](https://github.com/xoxojw/100-days-of-web-development/tree/23-sql-databases-intro)|
-|2024. 02. 04|[섹션 24 - Node.js&MySQL - Node.js 프로젝트에 MySQL DB 연결 후 데이터 가져오기](https://github.com/xoxojw/100-days-of-web-development/tree/24-mysql-in-nodejs)|
-|2024. 02. 05|[섹션 24 - Node.js&MySQL - 게시글 CRUD, address/time 태그, css white-space 속성](https://github.com/xoxojw/100-days-of-web-development/tree/24-mysql-in-nodejs)|
+![image](https://github.com/xoxojw/100-days-of-web-development/assets/124491335/c69f3ca6-a562-4da9-8e18-46d528e337fa)
+
+- 데이터를 저장할 때 엄격한 스키마나 데이터 구조, 여러 테이블 간의 관계에 의존하지 않는다.
+- 테이블 대신 ‘컬렉션’에 데이터를 저장
+- 유연성 : 다양한 데이터 타입과 구조를 쉽게 저장하고 변경할 수 있음
+
+<br>
+
+### 컬렉션과 문서
+
+**컬렉션**
+
+- 테이블과 비슷하지만 테이블과 달리 고정된 구조가 없음
+- 데이터 컨테이너의 개념
+- DB에는 하나 이상의 컬렉션이 있고, 컬렉션 내부에는 ‘문서’들이 있다.
+
+**문서**
+
+- 자바스크립트 객체 형태처럼 생김
+- key-value pair
+- 같은 컬렉션 안의 문서들은 같은 형태를 가질 필요가 없다.
+    - ex. Collection 1의 두 문서 `{”id”: “abc”, “name”: “Max”}`, `{”id”: “cde”, “title”: “Book”}`
+    - 한 문서는 `“name”: “Max”`, 다른 문서는 `“title”: “Book”`처럼 다른 key-value 형태를 가지고 있음을 알 수 있음
+
+NoSQL은 JavaScript의 객체, JavaScript에서의 데이터 관리 방법과 많은 유사점이 있다.
+
+하지만 JavaScript는 프로그래밍 언어이고 프로그램이 실행되는 동안에만 메모리에서 관리된다. 반면에 MongoDB와 같은 NoSQL 데이터베이스는 데이터가 파일에 저장되어 지속된다는 점에서 차이가 있다.
+
+> ✏️ 문서는 객체처럼 보일 수 있으나 프로그래밍 언어가 아닌 데이터베이스 시스템이라는 점을 기억하자!
+> 
+
+<br>
+<br>
+
+## NoSQL에서의 관계 데이터
+
+![image](https://github.com/xoxojw/100-days-of-web-development/assets/124491335/ebf9f758-a1b4-4056-8fd0-de4be58df1bc)
+
+- 관계 데이터를 정규화하여 여러 테이블에 나누어 저장하는 SQL과는 달리, NoSQL은 관계 데이터를 하나의 문서에 함께 저장하는 경우가 많음
+- `Books` 컬렉션의 문서에서 `“author”` 항목을 보면 **중첩된 형태**로 저장되어있는 것을 확인할 수 있음
+- 자주 사용하는 관계 데이터는 중첩된 형태로 저장해서 사용할 수도 있지만, `Movies` 컬렉션처럼 별개의 컬렉션으로 나누어서 저장할 수도 있음
+
+<br>
+
+### 데이터베이스 쿼리 계획하기
+
+- NoSQL에서는 쿼리가 가능한 효율적이 되도록 데이터베이스 레이아웃을 최적화 해야함
+- 자주 함께 조회되는 데이터는 일반적으로 함께 저장 (서로 다른 컬렉션에서 데이터를 머지하고자 하는 상황은 최소화해야함)
+
+<br>
+<br>
+
+## MongoDB 설치
+
+### brew로 설치
+
+[Install MongoDB Community Edition on macOS](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/)
+
+```bash
+brew tap mongodb/brew
+brew update
+brew install mongodb-community
+```
+
+<br>
+
+### mongod, mongosh 실행
+
+> mongod : 데이터베이스 서버
+mongosh : MongoDB 서버에 명령을 보내기 위한 셸(도구)
+> 
+
+먼저 원하는 곳에 MongoDB의 data와 log 파일을 저장해둘 로컬 폴더를 각각 만든다.
+
+- ex. `mongodb/data`, `mongodb/logs`
+
+위에서 만든 로컬 폴더 경로를 아래처럼 설정하여 MongoDB 서버를 실행한다.
+
+```bash
+// MongoDB 서버 실행, 데이터 경로 설정(실행마다 path 커맨드 입력해야함)
+mongod --dbpath /Users/jiwon/mongodb/data --logpath /Users/jiwon/mongodb/logs/mongo.log
+
+// 위의 mongod 실행 중인 터미널이 아닌 새 터미널 창에서 몽고디비 셸 실행
+mongosh
+
+// 종료 - Ctrl+C (Cmd+C 아님)
+```
+
+성공적으로 실행된 터미널 모습은 아래와 같다.
+
+![image](https://github.com/xoxojw/100-days-of-web-development/assets/124491335/a9726bac-75e9-4adf-8b1b-9fdca2fe0610)
+
+<br>
+<br>
+
+## MongoDB로 데이터 추가
+
+### `use databasename`
+
+```bash
+use ratingportal
+```
+
+- `ratingportal`이라는 데이터베이스로 전환
+    - 만약 이 데이터베이스가 존재하지 않는 경우, 바로 이 데이터베이스를 자동 생성하지는 않으나 이 데이터베이스 내에 새로운 데이터를 삽입하는 순간 데이터베이스가 자동으로 생성됨
+
+<br>
+
+### `db.collections`
+
+```bash
+db.restaurants
+```
+
+- `restaurants`라는 컬렉션 참조
+    - 이 컬렉션이 존재하지 않으면, `use`와 마찬가지로 이 컬렉션에 새 데이터를 삽입하면 컬렉션이 자동 생성됨
+- 자바스크립트 객체 속성에 액세스 하는 것과 유사
+
+<br>
+
+### `db.collections.insertOne`
+```bash
+db.restaurants.insertOne({ name: "아웃백 스테이크하우스", address: { street: "어떤대로 1", streetNumber: "23" } })
+db.restaurants.insertOne({ name: "버거 하우스", address: { street: "다른로", streetNumber: "2" } })
+```
+
+<br>
+<br>
