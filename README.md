@@ -32,3 +32,4 @@
 |2024. 01. 30|[섹션 23 - 데이터베이스 - MySQL 테이블 쿼리, 조인하기](https://github.com/xoxojw/100-days-of-web-development/tree/23-sql-databases-intro)|
 |2024. 02. 04|[섹션 24 - Node.js&MySQL - Node.js 프로젝트에 MySQL DB 연결 후 데이터 가져오기](https://github.com/xoxojw/100-days-of-web-development/tree/24-mysql-in-nodejs)|
 |2024. 02. 05|[섹션 24 - Node.js&MySQL - 게시글 CRUD, address/time 태그, css white-space 속성](https://github.com/xoxojw/100-days-of-web-development/tree/24-mysql-in-nodejs)|
+|2024. 02. 13|[섹션 25 - NoSQL&MongoDB - MongoDB 설치 및 데이터 삽입](https://github.com/xoxojw/100-days-of-web-development/tree/25-nosql-mongodb)|
