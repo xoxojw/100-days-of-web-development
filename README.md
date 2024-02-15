@@ -97,35 +97,238 @@ mongosh
 <br>
 <br>
 
-## MongoDB로 데이터 추가
+## MongoDB 데이터베이스 조작하기
 
-### `use databasename`
+### 데이터베이스/컬렉션 전환, 생성
 
-```bash
-use ratingportal
-```
+- `use databasename`
+    
+    ```bash
+    use ratingportal
+    ```
+    
+    - `ratingportal`이라는 데이터베이스로 전환
+        - 만약 이 데이터베이스가 존재하지 않는 경우, 바로 이 데이터베이스를 자동 생성하지는 않으나 이 데이터베이스 내에 새로운 데이터를 삽입하는 순간 데이터베이스가 자동으로 생성됨
 
-- `ratingportal`이라는 데이터베이스로 전환
-    - 만약 이 데이터베이스가 존재하지 않는 경우, 바로 이 데이터베이스를 자동 생성하지는 않으나 이 데이터베이스 내에 새로운 데이터를 삽입하는 순간 데이터베이스가 자동으로 생성됨
+- `db.collections`
+    
+    ```bash
+    db.restaurants
+    ```
+    
+    - `restaurants`라는 컬렉션 참조
+        - 이 컬렉션이 존재하지 않으면, `use`와 마찬가지로 이 컬렉션에 새 데이터를 삽입하면 컬렉션이 자동 생성됨
+    - 자바스크립트 객체 속성에 액세스 하는 것과 유사
 
 <br>
 
-### `db.collections`
+### 데이터 Create
 
-```bash
-db.restaurants
-```
+- `db.collections.insertOne` : 단일 삽입
+    
+    ```bash
+    db.restaurants.insertOne({ name: "아웃백 스테이크하우스", address: { street: "어떤대로 1", streetNumber: "23" } })
+    db.restaurants.insertOne({ name: "버거 하우스", address: { street: "다른로", streetNumber: "2" } })
+    ```
+    
 
-- `restaurants`라는 컬렉션 참조
-    - 이 컬렉션이 존재하지 않으면, `use`와 마찬가지로 이 컬렉션에 새 데이터를 삽입하면 컬렉션이 자동 생성됨
-- 자바스크립트 객체 속성에 액세스 하는 것과 유사
+- `db.collections.insertMany` : 다수 삽입
+    
+    ```bash
+    db.restaurants.insertMany([
+    	{
+    		name: "아웃백 스테이크하우스",
+    		address: { street: "어떤대로 1", streetNumber: "23" },
+    	},
+    	{
+    		name: "버거 하우스",
+    		address: { street: "다른로", streetNumber: "2" },
+    	},
+    ])
+    ```
+    
+<br>
+
+### 데이터 Read
+
+- `db.collections.find()`
+    
+    ```bash
+    db.restaurants.find() // 전체 데이터 조회
+    
+    [
+      {
+        _id: ObjectId('65cb1fcf30268aa2a2f2fed5'),
+        name: '아웃백 스테이크하우스',
+        address: { street: '어떤대로 1', streetNumber: '23' }
+      },
+      {
+        _id: ObjectId('65cb204c30268aa2a2f2fed6'),
+        name: '버거 하우스',
+        address: { street: '다른로', streetNumber: '2' }
+      }
+    ]
+    ```
+    
+    ```bash
+    db.restaurants.find({ name: "아웃백 스테이크하우스" }) // 조건을 충족하는 데이터 조회
+    
+    [
+      {
+        _id: ObjectId('65cb1fcf30268aa2a2f2fed5'),
+        name: '아웃백 스테이크하우스',
+        address: { street: '어떤대로 1', streetNumber: '23' }
+      }
+    ]
+    ```
+    
+
+- `db.collections.findOne({ condition })`
+    - 일치하는 문서 중 첫번째 일치하는 문서 반환
 
 <br>
 
-### `db.collections.insertOne`
+### 데이터 Update
+
+- `db.collections.updateOne({})` : 단일 업데이트
+- `db.collections.updateMany({})` : 다수 업데이트
+- `$set` : 문서 내의 특정 필드를 업데이트할 때 사용하는 연산자
+    
+    ```bash
+    ratingportal> db.restaurants.find()
+    [
+      {
+        _id: ObjectId('65cb1fcf30268aa2a2f2fed5'),
+        name: '아웃백 스테이크하우스',
+        address: { street: '어떤대로 1', streetNumber: '23' }
+      },
+      {
+        _id: ObjectId('65cb204c30268aa2a2f2fed6'),
+        name: '버거 하우스',
+        address: { street: '어떤대로', streetNumber: '2' }
+      }
+    ]
+    
+    // $set을 사용하여 업데이트
+    ratingportal> db.restaurants.updateOne(
+      { _id: ObjectId('65cb204c30268aa2a2f2fed6') },
+      { $set: { name: "New 버거 하우스" } }
+    )
+    
+    // $set으로 업데이트 할 때 중첩 필드도 가능
+    db.restaurants.updateOne(
+      { _id: ObjectId('65cb1fcf30268aa2a2f2fed5')},
+      { $set: { "address.street": "어떤대로" } }
+    )
+    
+    ratingportal> db.restaurants.find()
+    [
+      {
+        _id: ObjectId('65cb1fcf30268aa2a2f2fed5'),
+        name: '아웃백 스테이크하우스',
+        address: { street: '어떤대로', streetNumber: '23' }
+      },
+      {
+        _id: ObjectId('65cb204c30268aa2a2f2fed6'),
+        name: 'New 버거 하우스',
+        address: { street: '다른로', streetNumber: '2' }
+      }
+    ]
+    ```
+
+<br>   
+
+### 데이터 Delete
+
+- `db.collections.deleteOne()` :  단일 삭제
+    
+    ```bash
+    ratingportal> db.restaurants.find()
+    [
+      {
+        _id: ObjectId('65cb1fcf30268aa2a2f2fed5'),
+        name: '아웃백 스테이크하우스',
+        address: { street: '어떤대로', streetNumber: '23' }
+      },
+      {
+        _id: ObjectId('65cb204c30268aa2a2f2fed6'),
+        name: 'New 버거 하우스',
+        address: { street: '다른로', streetNumber: '2' }
+      }
+    ]
+    ratingportal> db.restaurants.deleteOne({ _id: ObjectId('65cb204c30268aa2a2f2fed6') })
+    { acknowledged: true, deletedCount: 1 }
+    ratingportal> db.restaurants.find()
+    [
+      {
+        _id: ObjectId('65cb1fcf30268aa2a2f2fed5'),
+        name: '아웃백 스테이크하우스',
+        address: { street: '어떤대로', streetNumber: '23' }
+      }
+    ]
+    ```
+    
+- `db.collections.deleteMany()` : 다수 삭제
+    - `db.collections.deleteMany({})` : 빈 객체를 전달하면 해당 컬렉션의 데이터 전체 삭제
+
+<br>
+<br>
+
+## restaurants DB로 SQL과 NoSQL 비교
+
+![image](https://github.com/xoxojw/100-days-of-web-development/assets/124491335/e3e8f7d5-e06b-4274-8bc1-81b563d5add8)
+
+![image](https://github.com/xoxojw/100-days-of-web-development/assets/124491335/d0b57c14-ac14-440a-94b3-94076691e358)
+
+SQL은 좀 더 정형화 되어있다면 NoSQL은 좀 더 유연적이라는 것이 특징이다.
+
+<br>
+
 ```bash
-db.restaurants.insertOne({ name: "아웃백 스테이크하우스", address: { street: "어떤대로 1", streetNumber: "23" } })
-db.restaurants.insertOne({ name: "버거 하우스", address: { street: "다른로", streetNumber: "2" } })
+ratingportal> db.types.insertOne({name: "양식" })
+{
+  acknowledged: true,
+  insertedId: ObjectId('65ce2b041a15794c64a9fdf6')
+}
+ratingportal> db.types.insertOne({name: "한식"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('65ce2b0d1a15794c64a9fdf7')
+}
+ratingportal> db.types.insertOne({name:"중식"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('65ce2b151a15794c64a9fdf8')
+}
+ratingportal> db.types.insertOne({name: "일식"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('65ce2b1f1a15794c64a9fdf9')
+}
+ratingportal> db.types.find()
+[
+  { _id: ObjectId('65ce2b041a15794c64a9fdf6'), name: '양식' },
+  { _id: ObjectId('65ce2b0d1a15794c64a9fdf7'), name: '한식' },
+  { _id: ObjectId('65ce2b151a15794c64a9fdf8'), name: '중식' },
+  { _id: ObjectId('65ce2b1f1a15794c64a9fdf9'), name: '일식' }
+]
+ratingportal> db.restaurants.insertOne(name: '맥도날드',
+    address: {
+      street: '강남대로',
+      streetNumber: '30',
+      postalCode: 80333,
+      city: '서울시',
+      country: '대한민국'
+    },
+    type: { typeId: ObjectId('65ce2b041a15794c64a9fdf6'), name: '양식' })
+ratingportal> db.reviews.insertOne({reviewer: { firstName: 'Max', lastName: 'Schwarzmüller' }, rating: 5,
+    text: '클래식해요',
+    date: new Data('2024-02-15'),
+    restaurant: {
+      restaurantId: ObjectId('65ce2c191a15794c64a9fdfa'),
+      name: '맥도날드'
+    }
+ })
 ```
 
 <br>
