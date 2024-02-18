@@ -1,37 +1,83 @@
-# 💯 100일 코딩 챌린지 - Web Development 부트캠프
-- 📅 시작 - 2024. 1. 7
-- 🧑‍🏫 강의 - [Udemy 100일 코딩 챌린지 - Web Development 부트캠프](https://www.udemy.com/course/100-2022-web-development/)
-- 🌌 방식 - 각 섹션별로 브랜치를 나누고 해당 브랜치에 공부한 내용 커밋
+# Ajax & 비동기식 JS 기반 Http 요청
 
-<br />
+브라우저 측에서 사용할 수 있는 두 가지 JavaScript 내장 API
 
-## ✅ 진행 상황
-|완료일|섹션|
-|:----:|----|
-|2024. 01. 07|[섹션 1 - 소개, HTML 및 CSS 기초](https://github.com/xoxojw/100-days-of-web-development/tree/02-html-css-basics)|
-|2024. 01. 08|[섹션 2 - HTML, CSS 개념 정리](https://github.com/xoxojw/100-days-of-web-development/tree/03-html-css-deep-dive)|
-|2024. 01. 09|[섹션 8 - 반응형 웹 디자인 이해 - em/rem/%, 미디어 쿼리](https://github.com/xoxojw/100-days-of-web-development/tree/08-responsive-web-design)|
-|2024. 01. 10|[섹션 9 - 멋있는 웹사이트 만들기 - css 변수, html/:root/*선택자, 변환과 전환, svg](https://github.com/xoxojw/100-days-of-web-development/tree/09-web-design-adv-css)|
-|2024. 01. 11|[섹션 11 - 자바스크립트 기초 이해하기](https://github.com/xoxojw/100-days-of-web-development/tree/11-javascript-basics)|
-|            |[섹션 12 - 고급 자바 스크립트: DOM을 사용한 작업 - 전역 객체와 DOM, DOM 조작](https://github.com/xoxojw/100-days-of-web-development/tree/12-adv-javascript-dom)|
-|2024. 01. 13|[섹션 12 - 이벤트 객체, DOM 요소의 스타일 변경](https://github.com/xoxojw/100-days-of-web-development/blob/12-adv-javascript-dom/03-event.md)|
-|2024. 01. 14|[섹션 13 - 제어 구조 - Boolean, 비교 및 논리연산자, if문, 반복문](https://github.com/xoxojw/100-days-of-web-development/tree/13-javascript-control-structures)|
-|2024. 01. 15|[섹션 14 - 틱택토 게임 - 플레이어 설정하기 - 모달, FormData, 유효성 검사와 에러 메시지, data-*](https://github.com/xoxojw/100-days-of-web-development/tree/14-tic-tac-toe-game)|
-|2024. 01. 17|[섹션 14 - 틱택토 게임 - 게임 로직 구성 - 게임 리셋 및 시작, 진행, 승부 및 결과 판단](https://github.com/xoxojw/100-days-of-web-development/blob/14-tic-tac-toe-game/02-game-logic.md)|
-|            |[섹션 5 - 웹사이트 제공 - 호스팅과 배포](https://github.com/xoxojw/100-days-of-web-development/tree/05-serving-a-website)|
-|2024. 01. 18|[섹션 16 - 백엔드 개발 - 어떤 언어들로 할 수 있는가?](https://github.com/xoxojw/100-days-of-web-development/tree/16-about-backend-development)|
-|2024. 01. 19|[섹션 17 - 백엔드 개발 - Node.js로 서버 생성하기](https://github.com/xoxojw/100-days-of-web-development/tree/17-node-js-introduction)|
-|2024. 01. 21|[섹션 18 - Express.js로 Node.js 강화하기](https://github.com/xoxojw/100-days-of-web-development/tree/18-nodejs-expressjs)|
-|2024. 01. 22|[섹션 19 - Express.js - 템플릿을 사용한 정적, 동적 콘텐츠(EJS)](https://github.com/xoxojw/100-days-of-web-development/tree/19-more-about-express)|
-|2024. 01. 23|[섹션 20 - Express.js - 동적 라우팅, 미들웨어 함수로 에러 핸들링](https://github.com/xoxojw/100-days-of-web-development/tree/20-handling-dynamic-routes)|
-|2024. 01. 25|[섹션 20 - Express.js - 모듈 분리, 쿼리 매개변수 ](https://github.com/xoxojw/100-days-of-web-development/tree/20-handling-dynamic-routes)|
-|            |[섹션 21 - 고급 자바스크립트 - 함수에서 객체와 배열의 동작, 원시값과 참조값](https://github.com/xoxojw/100-days-of-web-development/blob/21-more-adv-javascript/01_%ED%95%A8%EC%88%98-%EC%9B%90%EC%8B%9C%EA%B0%92-%EC%B0%B8%EC%A1%B0%EA%B0%92.md)|
-|2024. 01. 26|[섹션 21 - 고급 자바스크립트 - 스코프, 객체의 생성, 클래스, 비동기 프로그래밍](https://github.com/xoxojw/100-days-of-web-development/tree/21-more-adv-javascript)|
-|2024. 01. 28|[섹션 22 - 데이터베이스 - SQL vs NoSQL](https://github.com/xoxojw/100-days-of-web-development/tree/22-about-the-database)|
-|2024. 01. 29|[섹션 23 - 데이터베이스 - MySQL 설치 및 SQL 코드 작성](https://github.com/xoxojw/100-days-of-web-development/tree/23-sql-databases-intro)|
-|2024. 01. 30|[섹션 23 - 데이터베이스 - MySQL 테이블 쿼리, 조인하기](https://github.com/xoxojw/100-days-of-web-development/tree/23-sql-databases-intro)|
-|2024. 02. 04|[섹션 24 - Node.js&MySQL - Node.js 프로젝트에 MySQL DB 연결 후 데이터 가져오기](https://github.com/xoxojw/100-days-of-web-development/tree/24-mysql-in-nodejs)|
-|2024. 02. 05|[섹션 24 - Node.js&MySQL - 게시글 CRUD, address/time 태그, css white-space 속성](https://github.com/xoxojw/100-days-of-web-development/tree/24-mysql-in-nodejs)|
-|2024. 02. 13|[섹션 25 - NoSQL&MongoDB - MongoDB 설치 및 데이터 삽입](https://github.com/xoxojw/100-days-of-web-development/tree/25-nosql-mongodb)|
-|2024. 02. 15|[섹션 25 - NoSQL&MongoDB - MongoDB CRUD](https://github.com/xoxojw/100-days-of-web-development/tree/25-nosql-mongodb)|
-|2024. 02. 16|[섹션 27 - MongoDB, Multer로 파일 업로드 기능 구현하기](https://github.com/xoxojw/100-days-of-web-development/tree/27-adding-file-upload)|
+- `XMLHttpRequest`
+- `fetch()`
+
+<br>
+
+## 📌 Ajax
+
+> 비동기식 자바스크립트 XML(Asynchronous JavaScript And XML)
+> 
+
+자바스크립트를 사용하여 브라우저에서 서버와 비동기적으로 데이터를 교환하고 업데이트하는 데 사용되는 프로그래밍 기법
+
+웹 페이지 전체를 다시 로드하지 않고도 서버로부터 데이터를 받아와서 페이지의 일부분만을 업데이트할 수 있다.
+
+<br>
+
+### Ajax 사용 이전과 이후 비교
+
+- Ajax 없이 http 요청 보내기
+    - URL 입력 (해당 URL로 GET 요청을 보냄)
+    - 링크 클릭 (해당 URL로 GET 요청을 보냄)
+    - 폼 제출 (해당 URL로 GET 또는 POST 요청을 보냄)
+    
+    → 항상 새 페이지가 로드된다는 단점
+    
+
+- Ajax로 http 요청 보내기
+    - 브라우저 측 JavaScript를 통해 http 요청 보내기
+    - 같은 스크립트 코드에서 응답 처리
+    
+    → 브라우저 동작에 대한 전체적인 통제권을 가지고 새 페이지 로딩을 방지할 수 있음
+
+<br>
+
+### XMLHttpRequest 객체
+
+`XMLHttpRequest`는 브라우저에서 사용할 수 있는 Web API 내장 객체이다.
+
+- 처음에는 XML 데이터를 전송하기 위해 개발됨
+- 사용법이 복잡함
+- 일반적으로 서드파티 라이브러리와 함께 사용
+    - **axios**: 서버 사이드에서는 node.js의 `http` 모듈을 사용하고, 클라이언트(브라우저)에서는 `XMLHttpRequests`를 사용
+
+<br>
+
+### XML
+
+*Extensible Markup Language*의 약자로, 데이터를 정의하는 규칙을 제공하는 마크업 언어이다.
+
+- HTML을 베이스로 만들어졌기 때문에 HTML 형태처럼 보임
+- HTML은 표준화되었지만 XML은 그렇지 않다.
+- 더이상 복잡한 XML을 데이터 전송할 때 사용하지 않는다. → **현재는 `JSON` 형태를 사용**
+
+<br>
+
+### JSON
+
+*JavaScript Object Notation*의 약자로, 클라이언트와 서버 간의 HTTP 통신을 위한 텍스트 데이터 포맷이다.
+
+- 자바스크립트에 종속되지 않는 언어 독립형 데이터 포맷
+- 대부분의 프로그래밍 언어에서 사용할 수 있음
+- 자바스크립트의 객체 리터럴과 유사하게 키와 값으로 구성된 **순수한 텍스트**
+    - JSON의 **키**와 **문자열 값**은 큰따옴표로 묶어야 한다. (작은 따옴표 안됨)
+
+<br>
+<br>
+
+## 📌 fetch()
+
+`fetch` 함수는 `XMLHttpRequest` 객체와 마찬가지로 HTTP 요청 전송 기능을 제공하는 클라이언트 사이드 Web API이다.
+
+- `XMLHttpRequest` 객체보다 사용법이 간단하고 `Promise`를 지원하기 때문에 비동기 처리를 위한 콜백 패턴의 단점에서 자유로움
+    - 단, axios와 같이 `XMLHttpRequest`를 기반으로 하는 서드파티 라이브러리들은 Proimse API를 지원함에 유의
+- 비교적 최근에 추가된 Web API로 인터넷 익스플로러를 제외한 대부분의 모던 브라우저에서 제공
+- 사용법이 비교적 복잡하지 않음
+- `XMLHttpRequest`나 axios 같은 라이브러리에 대한 대안
+
+<br>
+<br>
