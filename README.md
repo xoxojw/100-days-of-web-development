@@ -35,3 +35,4 @@
 |2024. 02. 13|[섹션 25 - NoSQL&MongoDB - MongoDB 설치 및 데이터 삽입](https://github.com/xoxojw/100-days-of-web-development/tree/25-nosql-mongodb)|
 |2024. 02. 15|[섹션 25 - NoSQL&MongoDB - MongoDB CRUD](https://github.com/xoxojw/100-days-of-web-development/tree/25-nosql-mongodb)|
 |2024. 02. 16|[섹션 27 - MongoDB, Multer로 파일 업로드 기능 구현하기](https://github.com/xoxojw/100-days-of-web-development/tree/27-adding-file-upload)|
+|2024. 02. 18|[섹션 28 - Ajax와 XMLHttpRequest, Fetch 함수](https://github.com/xoxojw/100-days-of-web-development/tree/28-ajax-async-js-http)|
