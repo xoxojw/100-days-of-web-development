@@ -116,13 +116,16 @@ router.post('/posts/:id/delete', async function (req, res) {
 
 router.get('/posts/:id/comments', async function (req, res) {
   const postId = new ObjectId(req.params.id);
-  const post = await db.getDb().collection('posts').findOne({ _id: postId });
+  // Ajax로 댓글 데이터를 불러오기 이전에는
+  // post-detail 전체 페이지를 새로 렌더링해줘야 했기 때문에 post 데이터를 가져왔어야 함
+  // const post = await db.getDb().collection('posts').findOne({ _id: postId });
   const comments = await db
     .getDb()
     .collection('comments')
     .find({ postId: postId }).toArray();
 
-  return res.render('post-detail', { post: post, comments: comments });
+  // return res.render('post-detail', { post: post, comments: comments });
+  return res.json(comments);
 });
 
 router.post('/posts/:id/comments', async function (req, res) {
@@ -133,7 +136,8 @@ router.post('/posts/:id/comments', async function (req, res) {
     text: req.body.text,
   };
   await db.getDb().collection('comments').insertOne(newComment);
-  res.redirect('/posts/' + req.params.id);
+  // res.redirect('/posts/' + req.params.id);
+  res.json({ message: 'Comment added!' });
 });
 
 module.exports = router;
