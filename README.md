@@ -29,8 +29,8 @@
     
 
 - Ajax로 http 요청 보내기
-    - 브라우저 측 JavaScript를 통해 http 요청 보내기
-    - 같은 스크립트 코드에서 응답 처리
+    - 브라우저 측 JavaScript 코드 내부에서 직접 보내는 백그라운드 요청
+    - 백그라운드에서 호출되기 때문에 사용자들은 알 수 없음 (페이지 새로고침 X)
     
     → 브라우저 동작에 대한 전체적인 통제권을 가지고 새 페이지 로딩을 방지할 수 있음
 
@@ -78,6 +78,126 @@
 - 비교적 최근에 추가된 Web API로 인터넷 익스플로러를 제외한 대부분의 모던 브라우저에서 제공
 - 사용법이 비교적 복잡하지 않음
 - `XMLHttpRequest`나 axios 같은 라이브러리에 대한 대안
+
+<br>
+<br>
+
+## 📌 실전에서 적용하기
+
+```jsx
+// routes/blog.js
+
+router.get('/posts/:id/comments', async function (req, res) {
+  const postId = new ObjectId(req.params.id);
+  const post = await db.getDb().collection('posts').findOne({ _id: postId });
+  const comments = await db
+    .getDb()
+    .collection('comments')
+    .find({ postId: postId }).toArray();
+
+  return res.json(comments);
+});
+```
+
+```jsx
+// public/scripts/comments.js
+
+const loadCommentsBtnElement = document.getElementById('load-comments-btn');
+
+async function fetchCommentsForPost() {
+  const postId = loadCommentsBtnElement.dataset.postid;
+
+  const response = await fetch(`/posts/${postId}/comments`);
+  const responseData = await response.json()
+}
+
+loadCommentsBtnElement.addEventListener('click', fetchCommentsForPost);
+```
+
+routes/blog.js는 서버 사이드 코드이고, scripts/comments.js는 클라이언트 사이드 코드이다.
+
+<br>
+
+### res.json()
+
+- 여기서 json() 메서드는 **Express.js Reponse 객체의 메서드**
+- routes/blog.js의 `res.json()`은 서버 측에서 클라이언트로 데이터를 보낼 때 사용
+- JavaScript 객체나 배열을 JSON 문자열로 변환
+
+<br>
+
+### response.json()
+
+- 여기서 json 메서드는 **Fetch API Response 객체의 메서드**
+- scripts/comments.js의 `response.json()`은 서버로부터 받은 응답을 처리할 때 사용
+- JSON 형식의 응답 데이터를 파싱하여 JavaScript 객체로 변환
+
+<br>
+<br>
+
+## 📌 More HTTP Methods
+
+> 이번 섹션에서는 GET과 POST method만 다루어봤지만 이 외에도 더 많은 HTTP 메서드들이 있다.
+> 
+
+### GET
+
+데이터 fetch
+
+- URL 입력, method=”GET”
+- 링크 클릭
+- `<form method=”GET”>`
+
+### POST
+
+데이터 저장
+
+- method=”POST”
+- `<form method=”POST”>`
+
+GET과 POST는 브라우저의 디폴트 Http 메서드들이다.
+
+브라우저 디폴트 Http 메서드는 아니지만 **Ajax 또는 JavaScript 기반 Http request들로 사용할 수 있는 메서드들이 있다. - PUT, PATCH, DELETE**
+
+### PUT
+
+주로 리소스 전체를 업데이트 할 때 사용
+
+지정된 URI에 리소스가 없으면 새로 생성할 수 있고, 기존 리소스가 있다면 해당 리소스를 완전히 대체함
+
+- method: ‘PUT’
+
+### PATCH
+
+데이터 업데이트
+
+`PUT`과 달리 리소스의 일부만 업데이트한다.
+
+- method: ‘PATCH’
+
+### DELETE
+
+데이터 삭제
+
+- method: ‘DELETE’
+
+### 유의사항
+
+PUT, PATCH, DELETE는 브라우저 기본 메서드인 GET, POST와 달리 form submit method에 사용될 수 없다.
+
+```jsx
+// views/includes/post-item.ejs
+
+<form action="/posts/<%= post._id %>/delete" method="POST">
+  <button class="btn btn-alt">Delete Post</button>
+</form>
+```
+
+`<form method=”DELETE”>`를 사용할 수 없으므로, 포스트를 삭제하는 form임에도 `<form method=”POST”>`로 설정
+
+PUT, PATCH, DELETE 메서드는 JavaScript 기반 HTTP 요청의 경우에만 사용할 수 있기 때문이다. (브라우저 기반 HTTP 요청은 GET, POST만 가능)
+
+PUT, PATCH도 req.body를 전달할 수 있다. 단, DELETE는 불가능하다.(DELETE는 GET과 유사)
 
 <br>
 <br>
